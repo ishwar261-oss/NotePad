@@ -1,0 +1,17 @@
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\bin\Debug\net10.0-windows\IDzPad.exe
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\bin\Debug\net10.0-windows\IDzPad.deps.json
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\bin\Debug\net10.0-windows\IDzPad.runtimeconfig.json
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\bin\Debug\net10.0-windows\IDzPad.dll
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\bin\Debug\net10.0-windows\IDzPad.pdb
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.IDzPad.resources
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.csproj.GenerateResource.cache
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.AssemblyInfoInputs.cache
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.AssemblyInfo.cs
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.csproj.CoreCompileInputs.cache
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.dll
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\refint\IDzPad.dll
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.pdb
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.genruntimeconfig.cache
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\ref\IDzPad.dll
+C:\Users\Ishwar\source\repos\IDzPad\IDzPad\obj\Debug\net10.0-windows\IDzPad.Properties.Resources.resources
