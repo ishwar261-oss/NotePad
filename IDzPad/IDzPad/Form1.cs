@@ -143,7 +143,7 @@ namespace IDzPad
         {
             ColorDialog colorDialog = new ColorDialog();
 
-            // Background
+          
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxMain.BackColor = colorDialog.Color;
@@ -189,7 +189,7 @@ namespace IDzPad
 
         private void textBoxMain_SelectionChanged(object sender, EventArgs e)
         {
-            //HighlightSyntax();
+            
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -204,122 +204,9 @@ namespace IDzPad
 
             lblChars.Text = "Chars: " + textBoxMain.TextLength;
         }
-       /* private void HighlightSyntax()
-        {
-            int selectionStart = textBoxMain.SelectionStart;
-            int selectionLength = textBoxMain.SelectionLength;
-
-            textBoxMain.SuspendLayout();
-
-            string text = textBoxMain.Text;
-
-            // Reset all text
-            textBoxMain.SelectAll();
-            textBoxMain.SelectionColor = textBoxMain.ForeColor;
-
-            // =========================
-            // 1️⃣ Multi-line comments /* 
-            // =========================
-            var multiComments = System.Text.RegularExpressions.Regex.Matches(
-                text,
-                @"/\*.*?\*/           //mistake",
-           /*     System.Text.RegularExpressions.RegexOptions.Singleline
-            );
-
-            foreach (System.Text.RegularExpressions.Match match in multiComments)
-            {
-                textBoxMain.Select(match.Index, match.Length);
-                textBoxMain.SelectionColor = Color.FromArgb(87, 166, 74);
-            }
-
-            // =========================
-            // 2️⃣ Single-line comments //
-            // =========================
-            var singleComments = System.Text.RegularExpressions.Regex.Matches(
-                text,
-                @"//.*?$",
-                System.Text.RegularExpressions.RegexOptions.Multiline
-            );
-
-            foreach (System.Text.RegularExpressions.Match match in singleComments)
-            {
-                textBoxMain.Select(match.Index, match.Length);
-                textBoxMain.SelectionColor = Color.FromArgb(87, 166, 74);
-            }
-
-            // =========================
-            // 3️⃣ Strings "..."
-            // =========================
-            var stringMatches = System.Text.RegularExpressions.Regex.Matches(
-                text,
-                "\".*?\""
-            );
-
-            foreach (System.Text.RegularExpressions.Match match in stringMatches)
-            {
-                textBoxMain.Select(match.Index, match.Length);
-                textBoxMain.SelectionColor = Color.FromArgb(214, 157, 133);
-            }
-
-            // =========================
-            // 4️⃣ Numbers
-            // =========================
-            var numberMatches = System.Text.RegularExpressions.Regex.Matches(
-                text,
-                @"\b\d+(\.\d+)?\b"
-            );
-
-            foreach (System.Text.RegularExpressions.Match match in numberMatches)
-            {
-                textBoxMain.Select(match.Index, match.Length);
-                textBoxMain.SelectionColor = Color.FromArgb(181, 206, 168);
-            }
-
-            // =========================
-            // 5️⃣ Keywords
-            // =========================
-            string[] keywords =
-            {
-        "int","string","public","private","class","void","if","else",
-        "for","while","return","using","namespace","static","new",
-        "bool","true","false","switch","case","break","continue"
-    };
-
-            foreach (string keyword in keywords)
-            {
-                var matches = System.Text.RegularExpressions.Regex.Matches(
-                    text,
-                    @"\b" + keyword + @"\b"
-                );
-
-                foreach (System.Text.RegularExpressions.Match match in matches)
-                {
-                    textBoxMain.Select(match.Index, match.Length);
-                    textBoxMain.SelectionColor = Color.FromArgb(86, 156, 214);
-                }
-            }
-
-            // =========================
-            // 6️⃣ Function Names
-            // (word followed by "(" )
-            // =========================
-            var functionMatches = System.Text.RegularExpressions.Regex.Matches(
-                text,
-                @"\b[A-Za-z_][A-Za-z0-9_]*(?=\()"
-            );
-
-            foreach (System.Text.RegularExpressions.Match match in functionMatches)
-            {
-                textBoxMain.Select(match.Index, match.Length);
-                textBoxMain.SelectionColor = Color.FromArgb(220, 220, 170);
-            }
-
-            // Restore cursor
-            textBoxMain.Select(selectionStart, selectionLength);
-            textBoxMain.ResumeLayout();
-        }
-           */
+       
 
 
     }
 }
+
