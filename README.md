@@ -66,10 +66,6 @@ Also ensure compilers are added to **System PATH**.
 4. Click RUN
 5. View output in Output Panel
 
----
-
-## 📷 Screenshots
-(Add your IDE screenshots here)
 
 ---
 
