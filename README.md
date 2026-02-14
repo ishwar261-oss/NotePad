@@ -1,85 +1,93 @@
-# 📝 IDzPad
+# 💻 IDzPad – Multi Language Mini IDE
 
-IDzPad is a modern Notepad application built using **C# Windows Forms**.  
-It combines the simplicity of classic Notepad with modern UI design and basic code editor features.
+IDzPad is a modern lightweight code editor and mini IDE developed using C# WinForms.  
+It provides a clean coding environment with syntax highlighting, code execution, and developer-focused tools designed for learning and productivity.
 
 ---
 
 ## 🚀 Features
 
-### 🖥️ Modern UI
-- Borderless custom window design
-- Draggable top panel
-- Clean and minimal interface
+### 🧠 Code Editing
+- Multi-language syntax highlighting
+- Smart code formatting
+- Auto indentation
+- Comment / Uncomment tools
+- Auto bracket completion
+- Word wrap support
 
-### 🎨 Themes
-- 🌙 Dark Mode
-- ☀️ Light Mode
-- 🎨 Custom Background Color
+### ⚙️ IDE Capabilities
+- Run programs directly from editor
+- Supports C++, Java, and C#
+- Output panel for execution results
+- Error display and debugging feedback
+- Language detection
 
-### 📝 Text Editing
-- New / Open / Save / Save As
-- Undo / Redo
-- Cut / Copy / Paste
-- Select All
-- Tab Support
-
-### 🎯 Formatting
-- Change font (Selected text only)
-- Change text color (Selected text only)
-- Background color settings
-
-### 💻 Code Editor Features
-- C# Syntax Highlighting:
-  - Keywords
-  - Strings
-  - Comments (Single & Multi-line)
-  - Numbers
-  - Function names
-- Auto-closing:
-  - Braces `{ }`
-  - Parentheses `( )`
-  - Quotes `" "`
-- Current Line Indicator
-- Line, Column & Character Counter
+### 🎨 UI & Experience
+- Light / Dark / Custom themes
+- Status bar with line & column info
+- Clean developer-friendly interface
+- Menu-driven controls
 
 ---
 
-## 🛠️ Built With
-
+## 🧾 Supported Languages
+- C++
+- Java
 - C#
-- .NET Windows Forms
-- RichTextBox
-- Regex (for syntax highlighting)
-
+- Python (Editing support)
+- SQL (Editing support)
+- HTML (Editing support)
 
 ---
 
-## 📦 How To Run
+## 🛠️ Technologies Used
+- C# (.NET WinForms)
+- Regex (Syntax Highlighting Engine)
+- Process Execution Engine
+- RichTextBox Editor Control
 
-1. Clone the repository
-2. Open `IDzPad.sln` in Visual Studio
-3. Build and Run
+---
+
+## ⚙️ Requirements
+Make sure these are installed:
+
+- MinGW (for C++)
+- JDK (for Java)
+- .NET SDK (for C#)
+
+Also ensure compilers are added to **System PATH**.
+
+---
+
+## ▶️ How to Run
+1. Open IDzPad
+2. Write your code
+3. Select language
+4. Click RUN
+5. View output in Output Panel
+
+---
+
+## 📷 Screenshots
+(Add your IDE screenshots here)
 
 ---
 
 ## 🎯 Future Improvements
-
-- IntelliSense support
-- Multiple file tabs
-- Bracket matching highlight
-- Auto indentation
-- Multiple language syntax highlighting
-
----
-
-## 👨‍💻 Author
-
-**IDz**
+- IntelliSense Suggestions
+- File Tabs System
+- Embedded Terminal
+- Git Integration
+- Project Explorer
+- Error Line Highlighting
 
 ---
 
-## 📜 License
+## 👨‍💻 Developer
+Created by **Idz**  
+Passionate about building intelligent software tools and developer utilities.
 
-This project is free to use for educational purposes.
+---
 
+## ⭐ Support
+If you like this project, consider giving it a ⭐ on GitHub.
