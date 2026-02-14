@@ -1,4 +1,4 @@
-﻿namespace IDzPad
+namespace IDzPad
 {
     partial class IDzPad
     {
@@ -44,6 +44,14 @@
             copyToolStripMenuItem = new ToolStripMenuItem();
             pasteToolStripMenuItem = new ToolStripMenuItem();
             selectAllToolStripMenuItem = new ToolStripMenuItem();
+            codeToolStripMenuItem = new ToolStripMenuItem();
+            clangToolStripMenuItem = new ToolStripMenuItem();
+            cppToolStripMenuItem = new ToolStripMenuItem();
+            cToolStripMenuItem = new ToolStripMenuItem();
+            javaToolStripMenuItem = new ToolStripMenuItem();
+            pythonToolStripMenuItem = new ToolStripMenuItem();
+            sQlPLSQLToolStripMenuItem = new ToolStripMenuItem();
+            rUNToolStripMenuItem = new ToolStripMenuItem();
             fromatToolStripMenuItem = new ToolStripMenuItem();
             fontStyleToolStripMenuItem = new ToolStripMenuItem();
             fontColourToolStripMenuItem = new ToolStripMenuItem();
@@ -58,15 +66,20 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             textBoxMain = new RichTextBox();
             panel1 = new Panel();
+            label1 = new Label();
             statusStrip1 = new StatusStrip();
             lblLine = new ToolStripStatusLabel();
-            lblColumn = new ToolStripStatusLabel();
             lblChars = new ToolStripStatusLabel();
-            label1 = new Label();
+            lblColumn = new ToolStripStatusLabel();
+            panelOutput = new Panel();
+            btnOutputClose = new Button();
+            txtOutput = new TextBox();
+            lblLang = new Label();
             pnlheader.SuspendLayout();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
+            panelOutput.SuspendLayout();
             SuspendLayout();
             // 
             // pnlheader
@@ -130,10 +143,10 @@
             menuStrip1.Dock = DockStyle.None;
             menuStrip1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, editToolStripMenuItem1, fromatToolStripMenuItem, settingToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, editToolStripMenuItem1, codeToolStripMenuItem, fromatToolStripMenuItem, settingToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 43);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(330, 31);
+            menuStrip1.Size = new Size(394, 31);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -213,6 +226,63 @@
             selectAllToolStripMenuItem.Size = new Size(163, 28);
             selectAllToolStripMenuItem.Text = "Select All";
             selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // codeToolStripMenuItem
+            // 
+            codeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clangToolStripMenuItem, cppToolStripMenuItem, cToolStripMenuItem, javaToolStripMenuItem, pythonToolStripMenuItem, sQlPLSQLToolStripMenuItem, rUNToolStripMenuItem });
+            codeToolStripMenuItem.Name = "codeToolStripMenuItem";
+            codeToolStripMenuItem.Size = new Size(64, 27);
+            codeToolStripMenuItem.Text = "Code";
+            // 
+            // clangToolStripMenuItem
+            // 
+            clangToolStripMenuItem.Name = "clangToolStripMenuItem";
+            clangToolStripMenuItem.Size = new Size(192, 28);
+            clangToolStripMenuItem.Text = "C.lang";
+            clangToolStripMenuItem.Click += clangToolStripMenuItem_Click;
+            // 
+            // cppToolStripMenuItem
+            // 
+            cppToolStripMenuItem.Name = "cppToolStripMenuItem";
+            cppToolStripMenuItem.Size = new Size(192, 28);
+            cppToolStripMenuItem.Text = "Cpp";
+            cppToolStripMenuItem.Click += cppToolStripMenuItem_Click;
+            // 
+            // cToolStripMenuItem
+            // 
+            cToolStripMenuItem.Name = "cToolStripMenuItem";
+            cToolStripMenuItem.Size = new Size(192, 28);
+            cToolStripMenuItem.Text = "C#";
+            cToolStripMenuItem.Click += cToolStripMenuItem_Click;
+            // 
+            // javaToolStripMenuItem
+            // 
+            javaToolStripMenuItem.Name = "javaToolStripMenuItem";
+            javaToolStripMenuItem.Size = new Size(192, 28);
+            javaToolStripMenuItem.Text = "Java";
+            javaToolStripMenuItem.Click += javaToolStripMenuItem_Click;
+            // 
+            // pythonToolStripMenuItem
+            // 
+            pythonToolStripMenuItem.Name = "pythonToolStripMenuItem";
+            pythonToolStripMenuItem.Size = new Size(192, 28);
+            pythonToolStripMenuItem.Text = "Python";
+            pythonToolStripMenuItem.Click += pythonToolStripMenuItem_Click;
+            // 
+            // sQlPLSQLToolStripMenuItem
+            // 
+            sQlPLSQLToolStripMenuItem.Name = "sQlPLSQLToolStripMenuItem";
+            sQlPLSQLToolStripMenuItem.Size = new Size(192, 28);
+            sQlPLSQLToolStripMenuItem.Text = "SQl / PL_SQL";
+            sQlPLSQLToolStripMenuItem.Click += sQlPLSQLToolStripMenuItem_Click;
+            // 
+            // rUNToolStripMenuItem
+            // 
+            rUNToolStripMenuItem.ForeColor = Color.Red;
+            rUNToolStripMenuItem.Name = "rUNToolStripMenuItem";
+            rUNToolStripMenuItem.Size = new Size(192, 28);
+            rUNToolStripMenuItem.Text = "RUN  ▶️";
+            rUNToolStripMenuItem.Click += rUNToolStripMenuItem_Click;
             // 
             // fromatToolStripMenuItem
             // 
@@ -309,6 +379,8 @@
             textBoxMain.Text = "";
             textBoxMain.SelectionChanged += textBoxMain_SelectionChanged;
             textBoxMain.TextChanged += textBoxMain_TextChanged;
+            textBoxMain.KeyDown += textBoxMain_KeyDown;
+            textBoxMain.KeyPress += textBoxMain_KeyPress;
             // 
             // panel1
             // 
@@ -320,6 +392,17 @@
             panel1.Size = new Size(1920, 25);
             panel1.TabIndex = 6;
             panel1.Paint += panel1_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(900, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(175, 23);
+            label1.TabIndex = 0;
+            label1.Text = "©️ NotePad by @IDZz";
             // 
             // statusStrip1
             // 
@@ -341,14 +424,6 @@
             lblLine.Size = new Size(51, 20);
             lblLine.Text = "Line: 1";
             // 
-            // lblColumn
-            // 
-            lblColumn.BackColor = Color.White;
-            lblColumn.ForeColor = Color.Black;
-            lblColumn.Name = "lblColumn";
-            lblColumn.Size = new Size(75, 20);
-            lblColumn.Text = "Column: 1";
-            // 
             // lblChars
             // 
             lblChars.BackColor = Color.White;
@@ -357,16 +432,60 @@
             lblChars.Size = new Size(60, 20);
             lblChars.Text = "Chars: 0";
             // 
-            // label1
+            // lblColumn
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(900, 3);
-            label1.Name = "label1";
-            label1.Size = new Size(175, 23);
-            label1.TabIndex = 0;
-            label1.Text = "©️ NotePad by @IDZz";
+            lblColumn.BackColor = Color.White;
+            lblColumn.ForeColor = Color.Black;
+            lblColumn.Name = "lblColumn";
+            lblColumn.Size = new Size(75, 20);
+            lblColumn.Text = "Column: 1";
+            // 
+            // panelOutput
+            // 
+            panelOutput.BackColor = Color.Black;
+            panelOutput.Controls.Add(btnOutputClose);
+            panelOutput.Controls.Add(txtOutput);
+            panelOutput.Location = new Point(0, 780);
+            panelOutput.Name = "panelOutput";
+            panelOutput.Size = new Size(1920, 243);
+            panelOutput.TabIndex = 1;
+            panelOutput.Visible = false;
+            // 
+            // btnOutputClose
+            // 
+            btnOutputClose.AutoSize = true;
+            btnOutputClose.FlatAppearance.BorderSize = 0;
+            btnOutputClose.FlatStyle = FlatStyle.Flat;
+            btnOutputClose.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOutputClose.ForeColor = SystemColors.ButtonHighlight;
+            btnOutputClose.Location = new Point(1877, 3);
+            btnOutputClose.Name = "btnOutputClose";
+            btnOutputClose.Size = new Size(35, 38);
+            btnOutputClose.TabIndex = 1;
+            btnOutputClose.Text = "X";
+            btnOutputClose.UseVisualStyleBackColor = true;
+            btnOutputClose.Click += btnOutputClose_Click;
+            // 
+            // txtOutput
+            // 
+            txtOutput.BackColor = Color.Black;
+            txtOutput.BorderStyle = BorderStyle.None;
+            txtOutput.Dock = DockStyle.Fill;
+            txtOutput.ForeColor = SystemColors.Window;
+            txtOutput.Location = new Point(0, 0);
+            txtOutput.Name = "txtOutput";
+            txtOutput.Size = new Size(1920, 20);
+            txtOutput.TabIndex = 0;
+            // 
+            // lblLang
+            // 
+            lblLang.AutoSize = true;
+            lblLang.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLang.ForeColor = Color.Magenta;
+            lblLang.Location = new Point(844, 46);
+            lblLang.Name = "lblLang";
+            lblLang.Size = new Size(0, 28);
+            lblLang.TabIndex = 4;
             // 
             // IDzPad
             // 
@@ -374,6 +493,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1920, 1080);
+            Controls.Add(lblLang);
+            Controls.Add(panelOutput);
             Controls.Add(statusStrip1);
             Controls.Add(panel1);
             Controls.Add(textBoxMain);
@@ -393,6 +514,8 @@
             panel1.PerformLayout();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            panelOutput.ResumeLayout(false);
+            panelOutput.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -434,5 +557,17 @@
         private ToolStripStatusLabel lblLine;
         private ToolStripStatusLabel lblColumn;
         private ToolStripStatusLabel lblChars;
+        private ToolStripMenuItem codeToolStripMenuItem;
+        private ToolStripMenuItem clangToolStripMenuItem;
+        private ToolStripMenuItem cppToolStripMenuItem;
+        private ToolStripMenuItem cToolStripMenuItem;
+        private ToolStripMenuItem javaToolStripMenuItem;
+        private ToolStripMenuItem pythonToolStripMenuItem;
+        private ToolStripMenuItem sQlPLSQLToolStripMenuItem;
+        private ToolStripMenuItem rUNToolStripMenuItem;
+        private Panel panelOutput;
+        private TextBox txtOutput;
+        private Button btnOutputClose;
+        private Label lblLang;
     }
 }
