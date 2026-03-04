@@ -44,11 +44,6 @@ namespace IDzPad
 
         }
 
-        private void themeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             textBoxMain.Clear();
@@ -89,12 +84,7 @@ namespace IDzPad
             {
                 textBoxMain.BackColor = colorDialog1.Color; // Change text area background
             }
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        }       
 
         private void textBoxMain_TextChanged(object sender, EventArgs e)
         {
@@ -175,11 +165,6 @@ namespace IDzPad
             {
                 textBoxMain.ForeColor = colorDialog.Color;
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void IDzPad_Load(object sender, EventArgs e)
@@ -508,3 +493,4 @@ namespace IDzPad
         }
     }
 }
+
