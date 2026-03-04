@@ -88,8 +88,7 @@ namespace IDzPad
 
         private void textBoxMain_TextChanged(object sender, EventArgs e)
         {
-            HighlightSyntax();
-           
+            HighlightSyntax();         
         }
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,3 +492,4 @@ namespace IDzPad
         }
     }
 }
+
